@@ -4,7 +4,14 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex flex-col justify-center px-6 max-w-5xl mx-auto">
+    <section className="relative min-h-screen flex flex-col justify-center px-6 max-w-5xl mx-auto overflow-hidden">
+
+      {/* 🌈 Background Gradient */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute top-[-120px] left-[-100px] w-[400px] h-[400px] bg-blue-400/30 blur-3xl rounded-full animate-pulse"></div>
+        <div className="absolute bottom-[-120px] right-[-100px] w-[400px] h-[400px] bg-purple-400/30 blur-3xl rounded-full animate-pulse"></div>
+        <div className="absolute top-[40%] left-[50%] w-[300px] h-[300px] bg-cyan-300/20 blur-3xl rounded-full animate-pulse"></div>
+      </div>
 
       {/* Top Badge */}
       <motion.p
@@ -33,7 +40,7 @@ export default function Hero() {
         transition={{ duration: 0.8 }}
         className="text-xl md:text-2xl mt-4 text-gray-700 dark:text-gray-300"
       >
-        Full Stack Engineer • Backend Systems • AI Applications
+        Senior Full Stack Engineer • AI Systems Engineer • Backend Architect
       </motion.h2>
 
       {/* Description */}
@@ -43,9 +50,9 @@ export default function Hero() {
         transition={{ delay: 0.3 }}
         className="mt-6 text-lg text-gray-600 dark:text-gray-400 max-w-3xl leading-relaxed"
       >
-        Full Stack Engineer with 7+ years of experience building scalable web
-        applications, distributed systems, AI-powered platforms, and real-time
-        architectures using React, Next.js, FastAPI, Django, Node.js, and modern AI tooling.
+        I design and build production-grade web applications, AI-powered systems,
+        and scalable backend architectures using React, Next.js, Python, FastAPI,
+        Django, Node.js, and modern LLM-based AI workflows.
       </motion.p>
 
       {/* Buttons */}
@@ -72,7 +79,7 @@ export default function Hero() {
         </a>
 
         <a
-          href="https://www.linkedin.com/in/muhammadmidhat81"
+          href="https://www.linkedin.com/in/midhat81"
           target="_blank"
           rel="noopener noreferrer"
           className="px-6 py-3 border rounded-xl hover:scale-105 transition"
