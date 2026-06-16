@@ -33,9 +33,10 @@ export default function Projects() {
           },
           {
             title: "FutureHouse AI",
-            desc: "AI system that generates photorealistic home designs with multiple architectural views.",
-            tech: ["React", "TypeScript", "Cloudflare AI", "Supabase"],
+            desc: "AI-powered home visualization platform that generates 7 photorealistic architectural views based on style, budget, room count, and location. Features Floor Plan Builder, Virtual Tours, Cost Estimator, design comparison, and sharing capabilities.",
+            tech: ["React", "TypeScript", "Vite", "Supabase", "AI"],
             link: "https://github.com/midhat81/Future-House",
+            live: "https://future-house-ai.vercel.app",
             tag: "AI Visualization"
           },
           {
@@ -70,7 +71,9 @@ export default function Projects() {
             whileHover={{ scale: 1.02 }}
             className="p-6 rounded-2xl bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-white/20 dark:border-white/10 shadow-sm hover:shadow-2xl transition-all duration-300"
           >
-            <h3 className="text-xl font-semibold">{project.title}</h3>
+            <h3 className="text-xl font-semibold">
+              {project.title}
+            </h3>
 
             <p className="mt-2 text-gray-600 dark:text-gray-300">
               {project.desc}
@@ -88,14 +91,27 @@ export default function Projects() {
             </div>
 
             <div className="mt-5 flex items-center justify-between">
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 rounded-xl bg-black text-white text-sm transition-all duration-300 hover:shadow-lg hover:scale-[1.03] active:scale-[0.98]"
-              >
-                GitHub
-              </a>
+              <div className="flex gap-2">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 rounded-xl bg-black text-white text-sm transition-all duration-300 hover:shadow-lg hover:scale-[1.03]"
+                >
+                  GitHub
+                </a>
+
+                {"live" in project && (
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 rounded-xl border border-gray-300 dark:border-gray-700 text-sm transition-all duration-300 hover:shadow-lg hover:scale-[1.03]"
+                  >
+                    Live Demo
+                  </a>
+                )}
+              </div>
 
               <span className="text-xs text-gray-500">
                 {project.tag}
