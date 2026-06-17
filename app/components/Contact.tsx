@@ -29,7 +29,7 @@ export default function Contact() {
           </a>
   
           <a
-            href="https://www.linkedin.com/in/muhammadmidhat81"
+            href="www.linkedin.com/in/muhammadmidhat81"
             target="_blank"
             className="text-blue-600"
           >
