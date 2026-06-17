@@ -79,7 +79,7 @@ export default function Hero() {
         </a>
 
         <a
-          href="https://www.linkedin.com/in/midhat81"
+          href="www.linkedin.com/in/muhammadmidhat81"
           target="_blank"
           rel="noopener noreferrer"
           className="px-6 py-3 border rounded-xl hover:scale-105 transition"
